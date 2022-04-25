@@ -6,6 +6,7 @@ public class Main {
 
     public static void main(String[] args) {
         //criacao personagem 01
+        System.out.println("Informações de Mago");
         Mago m1 = new Mago();
         Scanner inputInt = new Scanner(System.in);
 
@@ -41,28 +42,28 @@ public class Main {
         System.out.println("Informe vida: ");
         int vida2 = Integer.parseInt(inputInt2.nextLine());
         m1.setVida(vida2);
-
         System.out.println("informe ataque: ");
         int ataque2 = Integer.parseInt(inputInt2.nextLine());
         m2.setAtaque(ataque2);
 
-        Scanner escolha = new Scanner(System.in);
+    }
 
+    public static void menu(){
+        Scanner escolha = new Scanner(System.in);
         System.out.println("-------------Menu------------------");
         System.out.println("1-Imprimir informacoes de guerreiro");
         System.out.println("2-Imprimir informacoes de mago");
-
-
         int escolha1 = Integer.parseInt(escolha.nextLine());
         if (escolha1 == 1){
-            imprimirInformacoes(m1);
+            imprimirInformacoes();
         }else if (escolha1 == 2){
-            imprimirInformacoes(m2);
+            imprimirInformacoes();
         }else {
             System.out.println("Escolha indefinida");
         }
-
     }
+
+
 
     public static void imprimirInformacoes(Personagem mago){
         System.out.println("------------------------------------");
